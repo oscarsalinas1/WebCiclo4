@@ -1,4 +1,4 @@
-export class VueloModelo{
+export class VueloModel{
     id?: String;
     fecha_inicio?: String;
     hora_inicio?: string;

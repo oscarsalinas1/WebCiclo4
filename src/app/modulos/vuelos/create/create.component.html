@@ -1,1 +1,47 @@
-<p>create works!</p>
+<div class="container">
+    <h3 class="center-align">Registrar Vuelos</h3>
+    <form [formGroup]="fgValidacion" class="col s12" (ngSubmit)="store()">
+      <div class="row">
+        <div class="input-field col s6">
+          <input formControlName="fecha_inicio" type="text" class="validate">
+          <label for="fecha_inicio">Fecha_inicio</label>
+        </div>
+        <div class="input-field col s6">
+          <input formControlName="hora_inicio" type="text" class="validate">
+          <label for="hora_inicio">Hora_inicio</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <input formControlName="fecha_fin" type="text" class="validate">
+          <label for="fecha_fin">Fecha_fin</label>
+        </div>
+        <div class="input-field col s6">
+          <input formControlName="hora_fin" type="text" class="validate">
+          <label for="hora_fin">Hora_fin</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <input formControlName="asientos_vendidos" type="text" class="validate">
+          <label for="asientos_vendidos">Asientos_vendidos</label>
+        </div>
+        <div class="input-field col s6">
+          <input formControlName="nombre_piloto" type="text" class="validate">
+          <label for="nombre_piloto">Nombre_piloto</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input formControlName="ruta" type="text" class="validate">
+          <label for="ruta">Ruta</label>
+        </div>
+      </div>
+      <div class="row center-align">
+        <button [disabled]="!fgValidacion.valid" class="btn waves-effect waves-light" type="submit" name="action">Enviar
+          <i class="material-icons right">send</i>
+        </button>
+      </div>
+    </form>
+  </div>
+

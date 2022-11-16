@@ -1,4 +1,4 @@
-export class AeropuertoModelo{
+export class AeropuertoModel{
     id?: String;
     nombre?: String;
     ciudad?: string;

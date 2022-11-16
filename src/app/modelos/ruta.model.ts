@@ -1,4 +1,4 @@
-export class RutaModelo{
+export class RutaModel{
     id?: String;
     origen?: String;
     destino?: string;

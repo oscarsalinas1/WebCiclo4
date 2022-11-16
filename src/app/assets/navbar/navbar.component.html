@@ -2,10 +2,14 @@
     <div class="nav-wrapper">
       <a href="#" class="brand-logo">MisionTic</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a routerLink="/admin">Usuario</a></li>
-        <li><a routerLink="/admin">Aeropuertos</a></li>
-        <li><a routerLink="/admin">Rutas</a></li>
-        <li><a routerLink="/admin">Vuelos</a></li>
+        <li *ngIf="activeSession"><a routerLink="/admin">Usuario</a></li>
+        <li *ngIf="activeSession"><a routerLink="/aeropuerto">Aeropuertos</a></li>
+        <li *ngIf="activeSession"><a routerLink="/ruta">Rutas</a></li>
+        <li *ngIf="activeSession"><a routerLink="/vuelo">Vuelos</a></li>
+        <!-- Sesion -->
+        <li *ngIf="!activeSession"><a routerLink="/admin/create">Registrarse</a></li>
+        <li *ngIf="!activeSession"><a routerLink="/seguridad/login">Login</a></li>
+        <li *ngIf="activeSession"><a routerLink="/seguridad/logout">Cerrar Sesion</a></li>
       </ul>
     </div>
   </nav>
